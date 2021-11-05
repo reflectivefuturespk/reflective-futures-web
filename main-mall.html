@@ -1,0 +1,460 @@
+<!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Fri Nov 05 2021 16:10:28 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5c3f7e1c19204adb88c198e9" data-wf-site="5babb1264254bf0ab1cfada7">
+<head>
+  <meta charset="utf-8">
+  <title>Main Mall - Reflective Futures</title>
+  <meta content="Main Mall - Reflective Futures" property="og:title">
+  <meta content="Main Mall - Reflective Futures" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/pk1.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Inconsolata:400,700","Libre Franklin:300,regular,600,700,800,900"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <style>
+li.chap-link:hover {
+	background-color: #1f1f1f !important;
+  	border-bottom: 1px dotted White;
+}
+div.index div.column-5 {
+  background-image: url('https://uploads-ssl.webflow.com/5babb1264254bf0ab1cfada7/5c4a46a9b883c14e5c8600db_dvdmap2.jpg') !important;
+	background-position: 0px 50%;
+    background-size: contain;
+  }
+div.caption {
+  transition: 500ms;
+  }
+.hidecaption {
+  opacity: 0 !important;
+  }
+div.cap-close {
+  display: none !important;
+  }
+img[alt="take action megaphone"], #helpshow #actionhelp {
+  display: none;
+  }
+  img.playcover {
+    width: 40px;
+    vertical-align: text-bottom !important;
+    margin-top: 5px;
+	}
+  .control-img.audio {
+  	opacity: 0;
+    pointer-events: none;
+    } /*no audio for now!*/
+  #helpshow {
+  	position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.75);
+    z-index: 3;
+    }
+  #helpshow div {
+  	position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    padding: 3px 8px;
+    color: White;
+    font-family: Inconsolata;
+    }
+  #helpshow #menuhelp {
+  	top: 100px;
+    left: 50px;
+    }
+  #helpshow #arrowshelp {
+  	right: 5px;
+    top: 20px;
+    }
+  #helpshow #actionhelp {
+  	right: 180px;
+    top: 105px;
+    }
+  #helpshow #caphelp {
+  	right: 20px;
+    top: 170px;
+    }
+  #nextchap {
+  	position: fixed;
+    display: none;
+    bottom: 20px;
+    right: 30px;
+    background-color: rgba(0,0,0,0.6);
+    font-family: Inconsolata, Verdana, sans-serif;
+    padding: 10px;
+    font-size: 30px;
+    color: White;
+    text-transform: uppercase;
+    z-index: 3;
+    cursor: pointer;
+    }
+@media only screen and (max-height: 800px) {
+  div.titlebar {
+    top: 15px;
+  }
+  .control-img.caption-open {
+    top: 50px;
+  }
+  .caption {
+    top: 80px;
+    width: 500px;
+  }
+  .caption-p {
+    font-size: 14px;
+  }
+  .cap-line {
+    width: 240px;
+  }
+  #helpshow #caphelp {
+    top: 120px;
+  }
+  #helpshow #menuhelp {
+    top: 60px;
+  }
+  #helpshow #arrowshelp {
+    right: 100px;
+    top: 60px;
+  }
+}
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+.norobotlines {
+	border-width: 0 !important;
+  }
+#bigintro {
+  /*display: none !important;*/
+	position: fixed;
+  top: 0;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 20;
+  padding-top: 10%;
+  padding-left: 100px;
+  padding-right: 100px;
+  cursor: pointer;
+  }
+#bigintro h1 {
+	font-size: 4vw;
+  color: White;
+  font-family: 'Libre Franklin', 'Helvetica Neue', Helvetica, sans-serif;
+  margin-bottom: 20px;
+  }
+  #bigintro h1 span.underliney {
+  	border-bottom: 1px solid #ffae01;
+  }
+  #bigintro h2 {
+  font-size: 2.8vw;
+  line-height: 1.1em !important;
+  padding-top: 15px;
+  color: White;
+  font-family: Inconsolata, Verdana, sans-serif;
+  letter-spacing: -1px;
+  margin-top: 40px;
+  }
+</style>
+  <div id="helpshow">
+    <div id="menuhelp"><i class="fas fa-arrow-up" style="transform: rotate(-30deg); webkit-transform: rotate(-30deg);"></i>
+      Click the compass to navigate the chapters</div>
+    <div id="arrowshelp">Scroll or use arrows to see each slide</div>
+    <div id="caphelp">Read more <i class="fas fa-arrow-up"></i>
+    </div>
+    <!-- <div id="audiohelp">On/off audio</div> -->
+    <div id="actionhelp">Take action <i class="fas fa-arrow-up" style="transform: rotate(30deg); webkit-transform: rotate(30deg);"></i>
+    </div>
+  </div>
+  <div id="nextchap">
+    next <i class="fas fa-arrow-right"></i>
+  </div>
+  <div id="bigintro">
+    <h1><span class="underliney">Dead Ends at Main Mall</span></h1>
+    <h2>
+      Poughkeepsie’s Main Mall used federal money to quickly change the
+      character of the historic Main Street commercial corridor.
+      The open-air pedestrian mall was meant to compliment the east-west arterial
+      by separating traffic and business in order to support the city’s central
+      business district. Sadly, a combination of rushed planning, growing
+      competition from suburban shopping centers, and a changing perception of
+      Poughkeepsie’s downtown area caused Main Mall to fail.
+    </h2>
+    <h2 style="text-align: right;">Explore <img class="playcover" src="https://bit.ly/2qDkgeF">
+    </h2>
+  </div>
+</head>
+<body class="body-2">
+  <div class="index w-clearfix">
+    <div class="w-embed w-iframe"><iframe src="https://mapmenu.reflectivefuturespk.org/export-map/menu-interactive.html" style="width: 100%; height: 100vh; border: 0;"></iframe></div>
+    <div class="index-close">
+      <div class="html-embed-3 w-embed"><i class="far fa-times-circle" style="font-size: 30px; color: White;"></i></div>
+    </div>
+  </div>
+  <div class="galaxy">
+    <div id="w-node-_608ee332-9a35-5e86-f0fd-a85b2f6688e8-88c198e9" class="controls">
+      <div data-w-id="32052f24-8a2b-8e4b-03f7-d814f0da9e12" class="titlebar w-clearfix">
+        <div data-w-id="e636b54b-81f6-9532-7bdb-a99953dcf527" class="home-compass"><img src="images/142-512.png" data-w-id="4e2a9874-5076-3d88-59ff-161d9a56a16b" alt="" class="compass-index"></div>
+        <div class="infohelp w-clearfix"><img src="images/volume_indicator-512.png" alt="" class="control-img audio"><img src="images/megaphone-communications-loudspeaker-shout-announcer-protest-512.png" alt="take action megaphone" class="control-img"><img src="images/135-512.png" alt="file icon opens caption" class="control-img caption-open"><img src="images/rewind1.png" alt="go to previous" id="rewind" class="control-img"><img src="images/Fast-forward-512.png" alt="go to next arrows" id="forward" class="control-img">
+          <div class="infowrap w-embed"><i class="fas fa-question-circle" style="font-size: 20px; color: #f19400;"></i></div>
+        </div>
+        <h3 class="chapter-title access-title">Dead Ends at Main Mall: 1960 - 2001</h3>
+      </div>
+    </div>
+    <div id="mall-0" class="planet mall-0 w-node-babf27e7-58f2-4bd9-3a94-8eb6c96f0d96-88c198e9 wf-section">
+      <div id="battle-cap-0" class="caption">
+        <div class="cap-line"></div>
+        <div class="cap-text w-clearfix">
+          <div class="cap-close">
+            <div class="w-embed"><i class="far fa-times-circle" style="color: rgb(255,165,2)"></i></div>
+          </div>
+          <p class="caption-p">The historic center of Poughkeepsie traces back to the intersection of Main Street and the Albany Post Road (present day Main and Market), where markets, businesses and community institutions sprang up and and developed outwards. Since 1811, Main Street has been connected with the Hudson River, and has remained a mixed-use commercial corridor for the City.</p>
+          <p class="cap-citation">Image Source: Library of Congress. 1900<br></p>
+        </div>
+      </div>
+    </div>
+    <div id="mall-1" class="planet mall-1 w-node-_50bc84e6-dc48-2c50-8b05-f5bca3a80f7a-88c198e9 wf-section">
+      <div id="battle-cap-1" class="caption">
+        <div class="cap-line"></div>
+        <div class="cap-text w-clearfix">
+          <div class="cap-close">
+            <div class="w-embed"><i class="far fa-times-circle" style="color: rgb(255,165,2)"></i></div>
+          </div>
+          <p class="caption-p">In the 20th century, the increased use of the automobile had an impact on Main Street. The street served as the main east-west vein of traffic and the strong central business core. In the late 1940s, concerns over the heavy traffic and parking became an important issue to Poughkeepsians, as the central part of the city was made unpleasant and parking meters were installed.<br></p>
+          <p class="cap-citation">Image Source: Pinterest, date unknown</p>
+        </div>
+      </div>
+    </div>
+    <div id="mall-2" class="planet mall-2 light w-node-_556b4e8a-7ed0-7550-f8c7-9a817cfd6fb4-88c198e9 wf-section">
+      <div id="battle-cap-2" class="caption">
+        <div class="cap-line"></div>
+        <div class="cap-text w-clearfix">
+          <div class="cap-close">
+            <div class="w-embed"><i class="far fa-times-circle" style="color: rgb(255,165,2)"></i></div>
+          </div>
+          <p class="caption-p">First proposed in 1960, Poughkeepsie’s Main Mall was intended to solidify the downtown as the city’s business core and solve traffic issues. Candeub &amp; Fleissig, the planning firm responsible for the 1960 General Development Plan, developed these renderings, argued that “the character of Main Street is changing in such a way as to make the creation of a mall a logical step”, and that a pleasant, pedestrian-friendly environment is needed to re-establish the integrity of Poughkeepsie’s downtown.</p>
+          <p class="cap-citation">Image Source: Candeub &amp; Fleissig General Development Plan. 1960</p>
+        </div>
+      </div>
+    </div>
+    <div id="mall-3" class="planet mall-3 light w-node-f872ec76-f1a7-4008-51a9-9a80834f63eb-88c198e9 wf-section">
+      <div id="battle-cap-2" class="caption">
+        <div class="cap-line"></div>
+        <div class="cap-text w-clearfix">
+          <div class="cap-close">
+            <div class="html-embed-4 w-embed"><i class="far fa-times-circle" style="color: rgb(255,165,2)"></i></div>
+          </div>
+          <p class="caption-p">By 1968, Poughkeepsie’s Chamber of Commerce raised enough funds to hire Gruen Associations to develop a Downtown Interim Improvement Program. Gruen Associates’ report was ready in 1969, and made the proposal for the mall to be installed as quick as possible. In November 1969, 42 elected and appointed city officials visited Kalamazoo, MI to visit the first pedestrian mall and assess its feasibility in Poughkeepsie. The trip resulted in the unanimous decision that an open-aired mall would work in Poughkeepsie.<br></p>
+          <p class="cap-citation">Image Source: Poughkeepsie Journal. 1969</p>
+        </div>
+      </div>
+    </div>
+    <div id="mall-4" class="planet mall-4 w-node-_8a35f550-9ce5-5d30-89e4-0fa013484963-88c198e9 wf-section">
+      <div class="caption">
+        <div class="cap-line"></div>
+        <div class="cap-text w-clearfix">
+          <div class="cap-close">
+            <div class="w-embed"><i class="far fa-times-circle" style="color: rgb(255,165,2)"></i></div>
+          </div>
+          <p class="caption-p">Plans for Main Mall culminated in 1972 with a pedestrian mall on Main Street between Market and Hamilton. Construction began in 1973 and was finished by 1974. In total, the mall cost $3.2 million. However, most of that was spent on utility work, leaving little left over to beautify the surface. Planners thought that the mall would create a “snowball effect” that would incentivize merchants to help improve the surface of the mall. Unfortunately, merchants were uncreative and viewed the mall as a “freebie” from the federal government, causing the mall to go un-updated.</p>
+          <p class="cap-citation">Image Source: Courtesy of Josh Simons. 1973</p>
+        </div>
+      </div>
+    </div>
+    <div id="mall-5" class="planet mall-5 w-node-_93e72a5e-95f7-eb3f-9770-7decb12419b9-88c198e9 wf-section">
+      <div class="caption">
+        <div class="cap-line"></div>
+        <div class="cap-text w-clearfix">
+          <div class="cap-close">
+            <div class="w-embed"><i class="far fa-times-circle" style="color: rgb(255,165,2)"></i></div>
+          </div>
+          <p class="caption-p">Main Mall opened in 1974 just in time for the holiday season. Initially, the mall was a great success, with people flocking from all over the county to come shop. Main Street’s history continued to be featured along the mall, especially with the iconic “Main Mall Row”, a group of 8 commercial buildings on Main Street constructed after the fire of 1870. These historic commercial buildings were listed on the National Register of Historic Places in 1980.<br></p>
+          <p class="cap-citation">Image Source: National Register of Historic Places. 1980</p>
+        </div>
+      </div>
+    </div>
+    <div id="mall-6" class="planet mall-6 w-node-_2a31bd67-836d-d576-0852-fe7ef6a9c93c-88c198e9 wf-section">
+      <div class="caption">
+        <div class="cap-line"></div>
+        <div class="cap-text w-clearfix">
+          <div class="cap-close">
+            <div class="w-embed"><i class="far fa-times-circle" style="color: rgb(255,165,2)"></i></div>
+          </div>
+          <p class="caption-p">The mall’s opening was untimely, as suburban shopping centers with free parking and indoor spaces were stiff competitors. This competition led to the closing of the Luckey Platt department store in 1981, an important store to the development of Main Street. Luckey Platt’s closing marked a 130-year history employing local residents and providing access to various goods throughout its 33 departments.</p>
+          <p class="cap-citation">Image Source: Pinterest, date unknown</p>
+        </div>
+      </div>
+    </div>
+    <div id="mall-7" class="planet mall-7 w-node-_6d0bbc93-bbed-bfa8-7def-914800cb6a71-88c198e9 wf-section">
+      <div class="caption">
+        <div class="cap-line"></div>
+        <div class="cap-text w-clearfix">
+          <div class="cap-close">
+            <div class="w-embed"><i class="far fa-times-circle" style="color: rgb(255,165,2)"></i></div>
+          </div>
+          <p class="caption-p">The 1980s brought further economic failure to the mall, as the image of the inner city shopping center became associated with crime, drugs, and poverty. By 1989, one out of five storefronts were vacant, with only three of the original stores remaining from its opening. This footage follows the band “Faith No More” as they walk through a deserted Main Mall in 1990.</p>
+          <p class="cap-citation">Video Source: MTV 1990</p>
+        </div>
+      </div>
+      <div data-poster-url="videos/mainmall1990-poster-00001.jpg" data-video-urls="videos/mainmall1990-transcode.mp4,videos/mainmall1990-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video-4 w-background-video w-background-video-atom"><video autoplay="" loop="" style="background-image:url(&quot;videos/mainmall1990-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+          <source src="videos/mainmall1990-transcode.mp4" data-wf-ignore="true">
+          <source src="videos/mainmall1990-transcode.webm" data-wf-ignore="true">
+        </video></div>
+    </div>
+    <div id="mall-8" class="planet mall-8 w-node-ba0ade3f-793d-8fd3-f54e-ea8e66b9be0d-88c198e9 wf-section">
+      <div class="caption">
+        <div class="cap-line"></div>
+        <div class="cap-text w-clearfix">
+          <div class="cap-close">
+            <div class="w-embed"><i class="far fa-times-circle" style="color: rgb(255,165,2)"></i></div>
+          </div>
+          <p class="caption-p">In 1990, a group of Main Mall merchants and property owners organized as the City of Poughkeepsie Partnership urged the city to reopen the eastern block of the mall, between Academy/Catharine and Hamilton to car traffic. Their goal was to increase business by making the stores more accessible. The eastern block of the mall was removed in 1991, with unanimous support of the city council and planning commission, while the merchants agreed to pay 40% of the removal costs. In 2001, the rest of the mall was completely removed as a part of a $2.5 million city project to revitalize downtown. Main Mall’s 27-year lifetime reflects the quick and poorly-planned decisions made on behalf of the city during the urban renewal era, yet the community-led initiative to reclaim Main Street as a thoroughfare demonstrates an important moment of collective action to change the city’s shape to serve the public need.</p>
+          <p class="cap-citation">Image Source: Courtesy of Josh Simons. 2000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5babb1264254bf0ab1cfada7" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script>
+var how = 0;
+function checkSlide() {
+  var ww = $(window).width();
+  var space = $(window).scrollLeft();
+  how = space / ww;
+  spaceint = Math.floor(how);
+  spaceup = Math.round(how);
+  return spaceint;
+  return spaceup;
+  return how;
+}
+$(document).ready(function() {
+  //compass menu
+  //colors
+  $("li#chap0-link").css("background-color","#1c667c !important"); /*blue, river*/
+  $("li#chap1-link").css("background-color","#622d72 !important"); /*purple, roads*/
+  $("li.chap2-link").css("background-color","#ea8c8c"); /*pink, rail*/
+  $("li.chap3-link").css("background-color","#d3c11f"); /*yellow, transit*/
+  $("li.chap4-link").css("background-color","#63b9e5"); /*light blue, bridge*/
+  $("li.chap5-link").css("background-color","#d60508"); /*red, access*/
+  $("li.chap6-link").css("background-color","#db841a"); /*orange, renewal*/
+  $("li.chap7-link").css("border-style","none none solid"); /*by foot*/
+  //link and link text  
+  $("li.chap2-link").attr("data-href","rail");
+  $("li.chap3-link").attr("data-href","public-transit");
+  $("li.chap4-link").html("SECOND BRIDGE");
+  $("li.chap4-link").attr("data-href", "bridge");
+  $("li.chap5-link").html("ACCESS");
+  $("li.chap5-link").attr("data-href", "access"); 
+  $("li.chap6-link").html("URBAN RENEWAL IN THREE ACTS");
+  $("li.chap-link.three-acts").eq(0).attr("data-href","route-9");
+  $("li.chap-link.three-acts").eq(1).attr("data-href","battle-ew");
+  $("li.chap-link.three-acts").eq(2).attr("data-href","main-mall");
+  $("li.chap7-link").html("BY FOOT --------------------------------");
+  //link functions
+  $("li.chap-link").click(function() {
+    if ($(this).hasClass("chap6-link")) {
+      $("li.three-acts").toggle();
+    } else {
+    var gofly = $(this).attr("data-href");
+    $("body").animate({opacity: 0},800);
+    setTimeout(function() {
+      window.location.href = "/" + gofly;
+    },800);
+    }
+  });
+  /*chapter navigations etc.*/
+  window.location.href= "#" +chapter + "0";
+  $("html,body").animate({scrollLeft: 0}, 200);
+  $("#bigintro").click(function() {
+    $("#bigintro").animate({opacity: 0}, 600);
+      setTimeout(function() {
+      	$("#bigintro").remove();
+      },600);
+  });
+  $("img.caption-open").click(function() {
+    //checkSlide(); /*not slide based, hide/shows all*/
+    $("div.caption").toggleClass("hidecaption");    
+    	//var thespace = spaceint;
+    	//$("div.caption").removeClass("open");
+    	//$("div#" + chapter + "-cap-" + thespace + "").addClass("open");
+    	//$("div#" + chapter + "-cap-" + thespace + "").animate({
+    	//opacity: 1}, 500);  
+    	//$("div.caption:not(.open)").animate({opacity: 0}, 200);
+      var thespacelink = spaceup;
+      var thescroll = $(window).width() * thespacelink;
+      $("html,body").animate({scrollLeft: thescroll}, 600);
+  	});
+    /*$("div.cap-close").click(function() {
+      $("div.caption").removeClass("open");
+    	$("div.caption").animate({
+    	opacity: 0}, 200);
+    });*/
+    $("img#forward").click(function() {
+    	checkSlide();
+        console.log(spaceint + " round down, " + spaceup + " round up");
+      if (spaceint == count) {
+      	$("body").animate({
+        opacity: 0}, 1000);
+        setTimeout(function() {
+        window.location.href = next;
+        }, 1000);
+      } else {
+      var thespacelink = spaceint + 1;
+      var thescroll = $(window).width() * thespacelink;
+      $("html,body").animate({scrollLeft: thescroll}, 600);
+      }
+    });
+    $("img#rewind").click(function() {
+    	checkSlide();
+        console.log(spaceint + " round down, " + spaceup + " round up");
+      if (how == spaceint) {
+      	var thespacelink = spaceint - 1;
+      	var thescroll = $(window).width() * thespacelink;
+      	$("html,body").animate({scrollLeft: thescroll}, 600);
+      }
+      else {
+        var thescroll = $(window).width() * spaceint;
+        $("html,body").animate({scrollLeft: thescroll}, 600);
+      }
+    });
+    $("img.compass-index").click(function() {
+    	$("div.index").fadeIn("fast");
+    });
+    $("div.index-close").click(function() {
+    	$("div.index").fadeOut("fast");
+    });
+    $("i.fa-question-circle").click(function() {
+    	$("div#helpshow").fadeIn("fast");
+    });
+    $("div#helpshow").click(function() {
+    	$(this).hide();
+    });
+    $(window).scroll(function() {
+    	checkSlide();
+      if (spaceint == count) {
+      	$("#nextchap").fadeIn("slow");
+      }
+    });
+    $("#nextchap").click(function() {
+    	$("body").animate({
+        opacity: 0}, 1000);
+        setTimeout(function() {
+        window.location.href = next;
+        }, 1000);
+    });
+}); /*document.ready*/
+</script>
+  <script>
+var chapter = "mall";
+var count = 8;
+var next = "/byfoot"
+var spaceint = 0;
+</script>
+</body>
+</html>
