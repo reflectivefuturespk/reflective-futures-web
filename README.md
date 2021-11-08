@@ -9,4 +9,4 @@ Made possible by the Onera Prize for Historic Preservation, presented through th
 
 Research & narrative by Ethan Boote and Morgan O’Hara in collaboration with MASS Design Group at the Hudson Valley Design Lab.
 
-Website design & development by Madeline Blount [mab253](https://github.com/mab253)
+Website design & development by Madeline Blount [(mab253)](https://github.com/mab253)
